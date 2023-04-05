@@ -171,3 +171,8 @@ export function yesterday() {
 export function tomorrow() {
   return dates.add(dates.startOf(new Date(), 'day'), 1, 'day')
 }
+
+export function isWeekend(day) {
+  const date = new Date(day)
+  return date.getDay() === 0 || date.getDay() === 6
+}

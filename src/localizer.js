@@ -22,6 +22,7 @@ import {
   visibleDays,
   minutes,
   isJustDate,
+  isWeekend
 } from './utils/dates'
 
 const localePropType = PropTypes.oneOfType([PropTypes.string, PropTypes.func])
@@ -183,6 +184,7 @@ export class DateLocalizer {
     this.sortEvents = spec.sortEvents || sortEvents
     this.inEventRange = spec.inEventRange || inEventRange
     this.isSameDate = spec.isSameDate || isSameDate
+    this.isWeekend = spec.isWeekend || isWeekend
     this.startAndEndAreDateOnly =
       spec.startAndEndAreDateOnly || startAndEndAreDateOnly
     this.segmentOffset = spec.browserTZOffset ? spec.browserTZOffset() : 0
