@@ -1,5 +1,5 @@
 {
-  "name": "react-big-calendar",
+  "name": "@additio/react-big-calendar",
   "version": "1.6.9",
   "description": "Calendar! with events",
   "author": {
@@ -8,11 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jquense/react-big-calendar.git"
+    "url": "git+https://github.com/additio/react-big-calendar.git"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "@additio:registry": "https://npm.pkg.github.com"
   },
   "license": "MIT",
   "main": "lib/index.js",
