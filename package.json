@@ -1,6 +1,6 @@
 {
   "name": "@additio/react-big-calendar",
-  "version": "0.0.0-development",
+  "version": "0.0.1",
   "description": "Calendar! with events",
   "author": {
     "name": "Jason Quense",
