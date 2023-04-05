@@ -193,7 +193,7 @@ class MonthView extends React.Component {
   }
 
   renderHeaders(row) {
-    let { localizer, components, workdaysOnly } = this.props
+    let { localizer, components } = this.props
     let first = row[0]
     let last = row[row.length - 1]
     let HeaderComponent = components.header || Header
