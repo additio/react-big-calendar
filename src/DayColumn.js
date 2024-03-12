@@ -38,35 +38,33 @@ class DayColumn extends React.Component {
     this.clearTimeIndicatorInterval()
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    if (nextProps.selectable && !this.props.selectable) this._selectable()
-    if (!nextProps.selectable && this.props.selectable)
-      this._teardownSelectable()
+ componentDidUpdate(prevProps, prevState) {
+    if (this.props.selectable && !prevProps.selectable) this._selectable();
+    if (!this.props.selectable && prevProps.selectable)
+      this._teardownSelectable();
 
-    this.slotMetrics = this.slotMetrics.update(nextProps)
-  }
+    this.slotMetrics = this.slotMetrics.update(this.props);
 
-  componentDidUpdate(prevProps, prevState) {
-    const { getNow, isNow, localizer, date, min, max } = this.props
-    const getNowChanged = localizer.neq(prevProps.getNow(), getNow(), 'minutes')
+    const { getNow, isNow, localizer, date, min, max } = this.props;
+    const getNowChanged = localizer.neq(prevProps.getNow(), getNow(), 'minutes');
 
     if (prevProps.isNow !== isNow || getNowChanged) {
-      this.clearTimeIndicatorInterval()
+      this.clearTimeIndicatorInterval();
 
       if (isNow) {
         const tail =
           !getNowChanged &&
           localizer.eq(prevProps.date, date, 'minutes') &&
-          prevState.timeIndicatorPosition === this.state.timeIndicatorPosition
+          prevState.timeIndicatorPosition === this.state.timeIndicatorPosition;
 
-        this.setTimeIndicatorPositionUpdateInterval(tail)
+        this.setTimeIndicatorPositionUpdateInterval(tail);
       }
     } else if (
       isNow &&
       (localizer.neq(prevProps.min, min, 'minutes') ||
         localizer.neq(prevProps.max, max, 'minutes'))
     ) {
-      this.positionTimeIndicator()
+      this.positionTimeIndicator();
     }
   }
 
@@ -238,8 +236,20 @@ class DayColumn extends React.Component {
           continuesPrior={continuesPrior}
           continuesAfter={continuesAfter}
           accessors={accessors}
+          resource={this.props.resource}
           selected={isSelected(event, selected)}
-          onClick={(e) => this._select(event, e)}
+          onClick={(e) =>
+            this._select(
+              {
+                ...event,
+                ...(this.props.resource && {
+                  sourceResource: this.props.resource,
+                }),
+                ...(isBackgroundEvent && { isBackgroundEvent: true }),
+              },
+              e
+            )
+          }
           onDoubleClick={(e) => this._doubleClick(event, e)}
           isBackgroundEvent={isBackgroundEvent}
           onKeyPress={(e) => this._keyPress(event, e)}

@@ -1,6 +1,6 @@
 # react-big-calendar
 
-An events calendar component built for React and made for modern browsers (read: not IE) and uses flexbox over the classic tables-caption approach.
+An events calendar component built for React and designed for modern browsers (read: not IE) and uses flexbox over the classic tables-caption approach.
 
 <p align="center">
   <img src="./assets/rbc-demo.gif" alt="Big Calendar Demo Image" />
@@ -165,4 +165,5 @@ Big Calendar. Carefully test each change accordingly.
 
 ## Join The Community
 
-Help us improve Big Calendar! Join us on [Slack](https://join.slack.com/t/bigcalendar/shared_invite/zt-1ml1j99af-qIvqOfosMog1W7WxM0~j2Q).
+Help us improve Big Calendar! Join us on [Slack](https://join.slack.com/t/bigcalendar/shared_invite/zt-2cerpqegz-mGzcbm7LxYLFPjcTa0gLgw).
+(Slack invite links do expire. If you can't get in, just file an issue and we'll get a new link.)

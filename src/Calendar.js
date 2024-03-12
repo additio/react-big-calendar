@@ -246,7 +246,7 @@ class Calendar extends React.Component {
     resources: PropTypes.arrayOf(PropTypes.object),
 
     /**
-     * Provides a unique identifier for each resource in the `resources` array
+     * Provides a unique identifier, or an array of unique identifiers, for each resource in the `resources` array
      *
      * ```js
      * string | (resource: Object) => any
@@ -604,6 +604,15 @@ class Calendar extends React.Component {
     showMultiDayTimes: PropTypes.bool,
 
     /**
+     * Determines a maximum amount of rows of events to display in the all day
+     * section for Week and Day views, will display `showMore` button if
+     * events excede this number.
+     *
+     * Defaults to `Infinity`
+     */
+    allDayMaxRows: PropTypes.number,
+
+    /**
      * Constrains the minimum _time_ of the Day and Week views.
      */
     min: PropTypes.instanceOf(Date),
@@ -865,6 +874,7 @@ class Calendar extends React.Component {
     views: [views.MONTH, views.WEEK, views.DAY, views.AGENDA],
     step: 30,
     length: 30,
+    allDayMaxRows: Infinity,
 
     doShowMoreDrillDown: true,
     drilldownView: views.DAY,

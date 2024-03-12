@@ -16,7 +16,7 @@ import DateContentRow from './DateContentRow'
 import Header from './Header'
 import DateHeader from './DateHeader'
 
-import { inRange, sortEvents } from './utils/eventLevels'
+import { inRange, sortWeekEvents } from './utils/eventLevels'
 
 let eventsForWeek = (evts, start, end, accessors, localizer) =>
   evts.filter((e) => inRange(e, start, end, accessors, localizer))
@@ -129,7 +129,7 @@ class MonthView extends React.Component {
       localizer
     )
 
-    weeksEvents.sort((a, b) => sortEvents(a, b, accessors, localizer))
+    const sorted = sortWeekEvents(weeksEvents, accessors, localizer)
 
     return (
       <DateContentRow
@@ -140,7 +140,7 @@ class MonthView extends React.Component {
         getNow={getNow}
         date={date}
         range={week}
-        events={weeksEvents}
+        events={sorted}
         maxRows={showAllEvents ? Infinity : rowLimit}
         selected={selected}
         selectable={selectable}
