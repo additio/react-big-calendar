@@ -1,3 +1,31 @@
+# [1.1.0](https://github.com/additio/react-big-calendar/compare/v1.0.0...v1.1.0) (2024-03-12)
+
+
+### Bug Fixes
+
+* add isBackgroundEvent to onSelectEvent event obj ([#2491](https://github.com/additio/react-big-calendar/issues/2491)) ([fdbb496](https://github.com/additio/react-big-calendar/commit/fdbb496eb50696c8b1744fc69249535121b2f4b1))
+* **ARIA:** remove tabindex ([#2508](https://github.com/additio/react-big-calendar/issues/2508)) ([7e01c3d](https://github.com/additio/react-big-calendar/commit/7e01c3d0495808cf3bf49a95c7cdd8ef98f54fed)), closes [#2498](https://github.com/additio/react-big-calendar/issues/2498)
+* changed flex-direction for rbc-toolbar mobile ([#2497](https://github.com/additio/react-big-calendar/issues/2497)) ([8d7b20d](https://github.com/additio/react-big-calendar/commit/8d7b20d8c971411d05757344d9eb422af1d8241c)), closes [#1699](https://github.com/additio/react-big-calendar/issues/1699)
+* day events sort fixed ([#2512](https://github.com/additio/react-big-calendar/issues/2512)) ([ac1ff00](https://github.com/additio/react-big-calendar/commit/ac1ff004a2f6384a1540e66ed47f219e1f9101c5))
+* **DnD:** dragAndDrop EventWrapper.js error: cannot add property 'X', object is not extensible ([0c4826a](https://github.com/additio/react-big-calendar/commit/0c4826a70378de7923bd772b15d481e3c30c530b))
+* **dnd:** move merge components ([fd02261](https://github.com/additio/react-big-calendar/commit/fd02261a66d80892a95e9e9ae4cbfe2779d4643c)), closes [#2359](https://github.com/additio/react-big-calendar/issues/2359)
+* fixing invalid ref with invalid scrollHeight ([#2459](https://github.com/additio/react-big-calendar/issues/2459)) ([a4bc8f3](https://github.com/additio/react-big-calendar/commit/a4bc8f3f275ccfba5b6861330b87b39f05505ca8))
+* Modify events.js ([#2444](https://github.com/additio/react-big-calendar/issues/2444)) ([2a838d9](https://github.com/additio/react-big-calendar/commit/2a838d981ed08c0be7ff6702f64b79db3158ff90))
+* replace deprecated onKeyPress by onKeyDown ([21f51f2](https://github.com/additio/react-big-calendar/commit/21f51f2bc4e218542fb09bf0e7d22be99ed50028))
+* **rtl DnD:** Dragging an event in the RTL month view calendar gets confused to the wrong side ([#2426](https://github.com/additio/react-big-calendar/issues/2426)) ([ebe8c2c](https://github.com/additio/react-big-calendar/commit/ebe8c2c3846ee8822e24756a82084f5b2a1d348f)), closes [#2310](https://github.com/additio/react-big-calendar/issues/2310) [#1801](https://github.com/additio/react-big-calendar/issues/1801)
+* scrollToTime does not work properly, when min specified ([#2051](https://github.com/additio/react-big-calendar/issues/2051)) ([04c1888](https://github.com/additio/react-big-calendar/commit/04c18886f46acd17f09dec5d73a06bc32e6c75e5))
+* to build ([#2517](https://github.com/additio/react-big-calendar/issues/2517)) ([621fc7e](https://github.com/additio/react-big-calendar/commit/621fc7ed25d95c0a65bc12bf513e6fd4e37cd2ef))
+* typo ([#2443](https://github.com/additio/react-big-calendar/issues/2443)) ([407e168](https://github.com/additio/react-big-calendar/commit/407e168921a861e171ec3c8aee23f5ffe855323d))
+
+
+### Features
+
+* add citation file ([#2523](https://github.com/additio/react-big-calendar/issues/2523)) ([3de0059](https://github.com/additio/react-big-calendar/commit/3de00592fd68a93582511e83ce9051078188e100))
+* **allDayMaxRows:** Allow for more granular control ([36871bf](https://github.com/additio/react-big-calendar/commit/36871bf509603dd05ad16f6cb9c5f5d9517cae16)), closes [#2386](https://github.com/additio/react-big-calendar/issues/2386)
+* **event sort:** update event sort for multi day ([#2502](https://github.com/additio/react-big-calendar/issues/2502)) ([ff209d0](https://github.com/additio/react-big-calendar/commit/ff209d035aca4865c4211dc03f27f7da0147c9a1))
+* showMore message add event info ([#2496](https://github.com/additio/react-big-calendar/issues/2496)) ([18012b7](https://github.com/additio/react-big-calendar/commit/18012b70ad48a5613bcb08f0a13251d88a9d258f))
+* Support multiple resources on an event ([91155c5](https://github.com/additio/react-big-calendar/commit/91155c5193f0a0b3899cb84c1dbfc6480fca4c0c)), closes [#2405](https://github.com/additio/react-big-calendar/issues/2405) [#1649](https://github.com/additio/react-big-calendar/issues/1649)
+
 ## [1.11.1](https://github.com/jquense/react-big-calendar/compare/v1.11.0...v1.11.1) (2024-03-04)
 
 
