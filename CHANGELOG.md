@@ -1,30 +1,93 @@
-# [1.1.0](https://github.com/additio/react-big-calendar/compare/v1.0.0...v1.1.0) (2024-03-12)
+## [1.13.3](https://github.com/jquense/react-big-calendar/compare/v1.13.2...v1.13.3) (2024-08-19)
 
 
 ### Bug Fixes
 
-* add isBackgroundEvent to onSelectEvent event obj ([#2491](https://github.com/additio/react-big-calendar/issues/2491)) ([fdbb496](https://github.com/additio/react-big-calendar/commit/fdbb496eb50696c8b1744fc69249535121b2f4b1))
-* **ARIA:** remove tabindex ([#2508](https://github.com/additio/react-big-calendar/issues/2508)) ([7e01c3d](https://github.com/additio/react-big-calendar/commit/7e01c3d0495808cf3bf49a95c7cdd8ef98f54fed)), closes [#2498](https://github.com/additio/react-big-calendar/issues/2498)
-* changed flex-direction for rbc-toolbar mobile ([#2497](https://github.com/additio/react-big-calendar/issues/2497)) ([8d7b20d](https://github.com/additio/react-big-calendar/commit/8d7b20d8c971411d05757344d9eb422af1d8241c)), closes [#1699](https://github.com/additio/react-big-calendar/issues/1699)
-* day events sort fixed ([#2512](https://github.com/additio/react-big-calendar/issues/2512)) ([ac1ff00](https://github.com/additio/react-big-calendar/commit/ac1ff004a2f6384a1540e66ed47f219e1f9101c5))
-* **DnD:** dragAndDrop EventWrapper.js error: cannot add property 'X', object is not extensible ([0c4826a](https://github.com/additio/react-big-calendar/commit/0c4826a70378de7923bd772b15d481e3c30c530b))
-* **dnd:** move merge components ([fd02261](https://github.com/additio/react-big-calendar/commit/fd02261a66d80892a95e9e9ae4cbfe2779d4643c)), closes [#2359](https://github.com/additio/react-big-calendar/issues/2359)
-* fixing invalid ref with invalid scrollHeight ([#2459](https://github.com/additio/react-big-calendar/issues/2459)) ([a4bc8f3](https://github.com/additio/react-big-calendar/commit/a4bc8f3f275ccfba5b6861330b87b39f05505ca8))
-* Modify events.js ([#2444](https://github.com/additio/react-big-calendar/issues/2444)) ([2a838d9](https://github.com/additio/react-big-calendar/commit/2a838d981ed08c0be7ff6702f64b79db3158ff90))
-* replace deprecated onKeyPress by onKeyDown ([21f51f2](https://github.com/additio/react-big-calendar/commit/21f51f2bc4e218542fb09bf0e7d22be99ed50028))
-* **rtl DnD:** Dragging an event in the RTL month view calendar gets confused to the wrong side ([#2426](https://github.com/additio/react-big-calendar/issues/2426)) ([ebe8c2c](https://github.com/additio/react-big-calendar/commit/ebe8c2c3846ee8822e24756a82084f5b2a1d348f)), closes [#2310](https://github.com/additio/react-big-calendar/issues/2310) [#1801](https://github.com/additio/react-big-calendar/issues/1801)
-* scrollToTime does not work properly, when min specified ([#2051](https://github.com/additio/react-big-calendar/issues/2051)) ([04c1888](https://github.com/additio/react-big-calendar/commit/04c18886f46acd17f09dec5d73a06bc32e6c75e5))
-* to build ([#2517](https://github.com/additio/react-big-calendar/issues/2517)) ([621fc7e](https://github.com/additio/react-big-calendar/commit/621fc7ed25d95c0a65bc12bf513e6fd4e37cd2ef))
-* typo ([#2443](https://github.com/additio/react-big-calendar/issues/2443)) ([407e168](https://github.com/additio/react-big-calendar/commit/407e168921a861e171ec3c8aee23f5ffe855323d))
+* Sass warning on latest version ([d5b6b87](https://github.com/jquense/react-big-calendar/commit/d5b6b8729f3d0960d1df5628a467a0a92f4bcb97))
+
+## [1.13.2](https://github.com/jquense/react-big-calendar/compare/v1.13.1...v1.13.2) (2024-08-06)
+
+
+### Bug Fixes
+
+* correct nested sass ([#2641](https://github.com/jquense/react-big-calendar/issues/2641)) ([88bdf77](https://github.com/jquense/react-big-calendar/commit/88bdf77d05d0548cf9228b11f49c550adbc07c4c))
+
+## [1.13.1](https://github.com/jquense/react-big-calendar/compare/v1.13.0...v1.13.1) (2024-07-12)
+
+
+### Bug Fixes
+
+* warning defaultProps in Agenda ([#2620](https://github.com/jquense/react-big-calendar/issues/2620)) ([d1c31c2](https://github.com/jquense/react-big-calendar/commit/d1c31c2d55e5a4a74043261a4e1f5de80396e071))
+
+# [1.13.0](https://github.com/jquense/react-big-calendar/compare/v1.12.2...v1.13.0) (2024-06-11)
 
 
 ### Features
 
-* add citation file ([#2523](https://github.com/additio/react-big-calendar/issues/2523)) ([3de0059](https://github.com/additio/react-big-calendar/commit/3de00592fd68a93582511e83ce9051078188e100))
-* **allDayMaxRows:** Allow for more granular control ([36871bf](https://github.com/additio/react-big-calendar/commit/36871bf509603dd05ad16f6cb9c5f5d9517cae16)), closes [#2386](https://github.com/additio/react-big-calendar/issues/2386)
-* **event sort:** update event sort for multi day ([#2502](https://github.com/additio/react-big-calendar/issues/2502)) ([ff209d0](https://github.com/additio/react-big-calendar/commit/ff209d035aca4865c4211dc03f27f7da0147c9a1))
-* showMore message add event info ([#2496](https://github.com/additio/react-big-calendar/issues/2496)) ([18012b7](https://github.com/additio/react-big-calendar/commit/18012b70ad48a5613bcb08f0a13251d88a9d258f))
-* Support multiple resources on an event ([91155c5](https://github.com/additio/react-big-calendar/commit/91155c5193f0a0b3899cb84c1dbfc6480fca4c0c)), closes [#2405](https://github.com/additio/react-big-calendar/issues/2405) [#1649](https://github.com/additio/react-big-calendar/issues/1649)
+* pass resource prop to DayColumnWrapper ([77760aa](https://github.com/jquense/react-big-calendar/commit/77760aa7ca60c83eaaf587fb2711e29586f5f635)), closes [#2607](https://github.com/jquense/react-big-calendar/issues/2607)
+
+## [1.12.2](https://github.com/jquense/react-big-calendar/compare/v1.12.1...v1.12.2) (2024-05-14)
+
+
+### Bug Fixes
+
+* bug with dnd drag drop ([#2602](https://github.com/jquense/react-big-calendar/issues/2602)) ([799a72a](https://github.com/jquense/react-big-calendar/commit/799a72ad5d1782f4d8518e834585728c32e1b7e3)), closes [#2601](https://github.com/jquense/react-big-calendar/issues/2601)
+
+## [1.12.1](https://github.com/jquense/react-big-calendar/compare/v1.12.0...v1.12.1) (2024-04-30)
+
+
+### Bug Fixes
+
+* fixing Drag and Drop Examples link ([fa4a378](https://github.com/jquense/react-big-calendar/commit/fa4a378f32ed298394fc4716f9d788c22205347e)), closes [#2585](https://github.com/jquense/react-big-calendar/issues/2585)
+
+# [1.12.0](https://github.com/jquense/react-big-calendar/compare/v1.11.7...v1.12.0) (2024-04-25)
+
+
+### Features
+
+* **translations:** translate CONTRIBUTING.md to Arabic ([#2558](https://github.com/jquense/react-big-calendar/issues/2558)) ([ae64158](https://github.com/jquense/react-big-calendar/commit/ae64158f102c10e3d1dc555e394c02cca85d7cc2))
+
+## [1.11.7](https://github.com/jquense/react-big-calendar/compare/v1.11.6...v1.11.7) (2024-04-25)
+
+
+### Bug Fixes
+
+* correcting doubleClick ([#2571](https://github.com/jquense/react-big-calendar/issues/2571)) ([775993c](https://github.com/jquense/react-big-calendar/commit/775993cee756c681a351678874007b175258714d)), closes [#2565](https://github.com/jquense/react-big-calendar/issues/2565)
+
+## [1.11.6](https://github.com/jquense/react-big-calendar/compare/v1.11.5...v1.11.6) (2024-04-15)
+
+
+### Bug Fixes
+
+* **docs:** correct link for 'props' in 'Understanding Dates' guide ([#2562](https://github.com/jquense/react-big-calendar/issues/2562)) ([59982ae](https://github.com/jquense/react-big-calendar/commit/59982ae073e9afda4370a8a5f1589c65b0d4580d))
+
+## [1.11.5](https://github.com/jquense/react-big-calendar/compare/v1.11.4...v1.11.5) (2024-04-15)
+
+
+### Bug Fixes
+
+* **stories:** fix not working links in docs ([#2559](https://github.com/jquense/react-big-calendar/issues/2559)) ([295957c](https://github.com/jquense/react-big-calendar/commit/295957c352a9e416c4ba43cb2fb81eaae2d62a69))
+
+## [1.11.4](https://github.com/jquense/react-big-calendar/compare/v1.11.3...v1.11.4) (2024-04-15)
+
+
+### Bug Fixes
+
+* Correct selection issues ([def4934](https://github.com/jquense/react-big-calendar/commit/def4934b45804c1ccdeaa4c5c8ddb52b346b0d08))
+
+## [1.11.3](https://github.com/jquense/react-big-calendar/compare/v1.11.2...v1.11.3) (2024-04-02)
+
+
+### Bug Fixes
+
+* **Selection:** handling of terminating event ([937b4c5](https://github.com/jquense/react-big-calendar/commit/937b4c5019a327310d7e27dbbf6f6bd71876aaf4))
+
+## [1.11.2](https://github.com/jquense/react-big-calendar/compare/v1.11.1...v1.11.2) (2024-03-12)
+
+
+### Bug Fixes
+
+* correct slotMetrics issue in TimeGrid ([e25f187](https://github.com/jquense/react-big-calendar/commit/e25f1878a8d8aaf37b7b5721f76a1be4ceb0e988)), closes [#2529](https://github.com/jquense/react-big-calendar/issues/2529)
 
 ## [1.11.1](https://github.com/jquense/react-big-calendar/compare/v1.11.0...v1.11.1) (2024-03-04)
 
