@@ -1,3 +1,26 @@
+# [1.2.0](https://github.com/additio/react-big-calendar/compare/v1.1.0...v1.2.0) (2024-08-20)
+
+
+### Bug Fixes
+
+* bug with dnd drag drop ([#2602](https://github.com/additio/react-big-calendar/issues/2602)) ([799a72a](https://github.com/additio/react-big-calendar/commit/799a72ad5d1782f4d8518e834585728c32e1b7e3)), closes [#2601](https://github.com/additio/react-big-calendar/issues/2601)
+* correct nested sass ([#2641](https://github.com/additio/react-big-calendar/issues/2641)) ([88bdf77](https://github.com/additio/react-big-calendar/commit/88bdf77d05d0548cf9228b11f49c550adbc07c4c))
+* Correct selection issues ([def4934](https://github.com/additio/react-big-calendar/commit/def4934b45804c1ccdeaa4c5c8ddb52b346b0d08))
+* correct slotMetrics issue in TimeGrid ([e25f187](https://github.com/additio/react-big-calendar/commit/e25f1878a8d8aaf37b7b5721f76a1be4ceb0e988)), closes [#2529](https://github.com/additio/react-big-calendar/issues/2529)
+* correcting doubleClick ([#2571](https://github.com/additio/react-big-calendar/issues/2571)) ([775993c](https://github.com/additio/react-big-calendar/commit/775993cee756c681a351678874007b175258714d)), closes [#2565](https://github.com/additio/react-big-calendar/issues/2565)
+* **docs:** correct link for 'props' in 'Understanding Dates' guide ([#2562](https://github.com/additio/react-big-calendar/issues/2562)) ([59982ae](https://github.com/additio/react-big-calendar/commit/59982ae073e9afda4370a8a5f1589c65b0d4580d))
+* fixing Drag and Drop Examples link ([fa4a378](https://github.com/additio/react-big-calendar/commit/fa4a378f32ed298394fc4716f9d788c22205347e)), closes [#2585](https://github.com/additio/react-big-calendar/issues/2585)
+* Sass warning on latest version ([d5b6b87](https://github.com/additio/react-big-calendar/commit/d5b6b8729f3d0960d1df5628a467a0a92f4bcb97))
+* **Selection:** handling of terminating event ([937b4c5](https://github.com/additio/react-big-calendar/commit/937b4c5019a327310d7e27dbbf6f6bd71876aaf4))
+* **stories:** fix not working links in docs ([#2559](https://github.com/additio/react-big-calendar/issues/2559)) ([295957c](https://github.com/additio/react-big-calendar/commit/295957c352a9e416c4ba43cb2fb81eaae2d62a69))
+* warning defaultProps in Agenda ([#2620](https://github.com/additio/react-big-calendar/issues/2620)) ([d1c31c2](https://github.com/additio/react-big-calendar/commit/d1c31c2d55e5a4a74043261a4e1f5de80396e071))
+
+
+### Features
+
+* pass resource prop to DayColumnWrapper ([77760aa](https://github.com/additio/react-big-calendar/commit/77760aa7ca60c83eaaf587fb2711e29586f5f635)), closes [#2607](https://github.com/additio/react-big-calendar/issues/2607)
+* **translations:** translate CONTRIBUTING.md to Arabic ([#2558](https://github.com/additio/react-big-calendar/issues/2558)) ([ae64158](https://github.com/additio/react-big-calendar/commit/ae64158f102c10e3d1dc555e394c02cca85d7cc2))
+
 ## [1.13.3](https://github.com/jquense/react-big-calendar/compare/v1.13.2...v1.13.3) (2024-08-19)
 
 
