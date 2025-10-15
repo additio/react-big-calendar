@@ -10,6 +10,7 @@ import localeData from 'dayjs/plugin/localeData'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
 import minMax from 'dayjs/plugin/minMax'
 import utc from 'dayjs/plugin/utc'
+import isLeapYear from 'dayjs/plugin/isLeapYear'
 
 const weekRangeFormat = ({ start, end }, culture, local) =>
   local.format(start, 'MMMM DD', culture) +
@@ -70,6 +71,7 @@ export default function (dayjsLib) {
   dayjsLib.extend(localizedFormat)
   dayjsLib.extend(minMax)
   dayjsLib.extend(utc)
+  dayjsLib.extend(isLeapYear)
 
   const locale = (dj, c) => (c ? dj.locale(c) : dj)
 
@@ -190,7 +192,7 @@ export default function (dayjsLib) {
     const tm = dayjs(time).format('HH:mm:ss')
     const dt = dayjs(date).startOf('day').format('MM/DD/YYYY')
     // We do it this way to avoid issues when timezone switching
-    return dayjsLib(`${dt} ${tm}`, 'MM/DD/YYYY HH:mm:ss').toDate()
+    return dayjs(`${dt} ${tm}`).toDate()
   }
 
   function add(date, adder, unit) {
@@ -238,7 +240,15 @@ export default function (dayjsLib) {
   }
 
   function firstVisibleDay(date) {
-    return dayjs(date).startOf('month').startOf('week').toDate()
+    const firstDayOfMonth = dayjs(date).startOf('month')
+    let firstDayOfWeek = dayjs(firstDayOfMonth).startOf('week')
+    // special handling for leapyears until Dayjs patches it
+    if (dayjs(firstDayOfMonth).isLeapYear()) {
+      const day = firstDayOfMonth.toDate().getDay(),
+        diff = firstDayOfMonth.toDate().getDate() - day + (day == 0 ? -6 : 1)
+      firstDayOfWeek.date(diff)
+    }
+    return firstDayOfWeek.toDate()
   }
 
   function lastVisibleDay(date) {

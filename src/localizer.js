@@ -23,7 +23,7 @@ import {
   visibleDays,
   minutes,
   isJustDate,
-  isWeekend
+  isWeekend,
 } from './utils/dates'
 
 const localePropType = PropTypes.oneOfType([PropTypes.string, PropTypes.func])

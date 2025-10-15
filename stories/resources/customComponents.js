@@ -81,6 +81,41 @@ const customComponents = {
       </div>
     )
   },
+  showMore: (showMoreProps) => {
+    return (
+      <button
+        id="my-custom-show-more"
+        style={{ border: '4px solid red', cursor: 'pointer' }}
+        onClick={() => {
+          console.log('showMoreProps', showMoreProps)
+          window.alert(`
+            Clicked ${showMoreProps.slotDate
+              .toISOString()
+              .substr(0, 10)} with ${
+            showMoreProps.remainingEvents.length
+          } remaining events.
+            Open the console for the full set of props.
+          `)
+        }}
+      >
+        {showMoreProps.count} more!
+      </button>
+    )
+  },
+  timeIndicatorWrapper: (timeIndicatorWrapperProps) => {
+    return (
+      <div
+        {...timeIndicatorWrapperProps}
+        style={{
+          ...timeIndicatorWrapperProps.style,
+          backgroundColor: 'red',
+          height: '2px',
+        }}
+      >
+        Time Ex
+      </div>
+    )
+  },
 }
 
 export default customComponents

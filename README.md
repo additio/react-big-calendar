@@ -123,6 +123,7 @@ const MyCalendar = (props) => (
 Note that the dayjsLocalizer extends Day.js with the following plugins:
 
 - [IsBetween](https://day.js.org/docs/en/plugin/is-between)
+- [IsLeapYear](https://day.js.org/docs/en/plugin/is-leap-year)
 - [IsSameOrAfter](https://day.js.org/docs/en/plugin/is-same-or-after)
 - [IsSameOrBefore](https://day.js.org/docs/en/plugin/is-same-or-before)
 - [LocaleData](https://day.js.org/docs/en/plugin/locale-data)
@@ -165,7 +166,7 @@ Big Calendar. Carefully test each change accordingly.
 
 ## Join The Community
 
-Help us improve Big Calendar! Join us on [Slack](https://join.slack.com/t/bigcalendar/shared_invite/zt-2idl5rs6c-qjCYJxeEWxTpXEf7D8x1Eg).
+Help us improve Big Calendar! Join us on [Slack](https://join.slack.com/t/bigcalendar/shared_invite/zt-30oxxdz6s-1Q3ubN2qwav~i1m82_FWog).
 (Slack invite links do expire. If you can't get in, just file an issue and we'll get a new link.)
 
 ## Translations

@@ -68,6 +68,20 @@ CustomTimeGutterWrapper.args = {
   },
 }
 
+export const CustomTimeIndicatorWrapper = Template.bind({})
+CustomTimeIndicatorWrapper.storyName = 'custom TimeIndicator wrapper'
+CustomTimeIndicatorWrapper.args = {
+  popup: true,
+  events: demoEvents,
+  onSelectEvent: action('event selected'),
+  defaultDate: new Date(2015, 3, 1),
+  defaultView: Views.WEEK,
+  views: [Views.WEEK, Views.DAY],
+  components: {
+    timeIndicatorWrapper: customComponents.timeIndicatorWrapper,
+  },
+}
+
 export const CustomDateCellWrapper = Template.bind({})
 CustomDateCellWrapper.storyName = 'add custom dateCellWrapper'
 CustomDateCellWrapper.args = {
@@ -127,5 +141,15 @@ CustomDayColumnWrapper.parameters = {
       story:
         'The custom DayColumnWrapper allows you to add your own custom logic when rendering a Day Column.',
     },
+  },
+}
+
+export const CustomShowMore = Template.bind({})
+CustomShowMore.storyName = 'add custom showMore'
+CustomShowMore.args = {
+  defaultView: Views.MONTH,
+  events,
+  components: {
+    showMore: customComponents.showMore,
   },
 }

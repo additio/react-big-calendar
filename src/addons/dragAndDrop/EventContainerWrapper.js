@@ -1,8 +1,8 @@
+import { scrollParent, scrollTop } from 'dom-helpers'
+import qsa from 'dom-helpers/cjs/querySelectorAll'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { DnDContext } from './DnDContext'
-import { scrollParent, scrollTop } from 'dom-helpers'
-import qsa from 'dom-helpers/cjs/querySelectorAll'
 
 import Selection, {
   getBoundsForNode,
@@ -118,12 +118,43 @@ class EventContainerWrapper extends React.Component {
       boundaryBox
     )
 
+    const end = this._calculateDnDEnd(start)
+
     this.context.draggable.onDropFromOutside({
       start,
-      end: slotMetrics.nextSlot(start),
+      end,
       allDay: false,
       resource,
     })
+
+    // Cleanup after dropping from outside
+    this.reset()
+  }
+
+  handleDragOverFromOutside = (point, bounds) => {
+    const { slotMetrics } = this.props
+
+    const start = slotMetrics.closestSlotFromPoint(
+      { y: point.y, x: point.x },
+      bounds
+    )
+    const end = this._calculateDnDEnd(start)
+    const event = this.context.draggable.dragFromOutsideItem()
+    this.update(event, slotMetrics.getRange(start, end, false, true))
+  }
+
+  _calculateDnDEnd = (start) => {
+    const { accessors, slotMetrics, localizer } = this.props
+    const event = this.context.draggable.dragFromOutsideItem()
+    const { duration: eventDuration } = eventTimes(event, accessors, localizer)
+
+    let end = slotMetrics.nextSlot(start)
+    const eventHasDuration = !isNaN(eventDuration)
+    if (eventHasDuration) {
+      const eventEndSlot = localizer.add(start, eventDuration, 'milliseconds')
+      end = new Date(Math.max(eventEndSlot, end))
+    }
+    return end
   }
 
   updateParentScroll = (parent, node) => {
@@ -200,10 +231,14 @@ class EventContainerWrapper extends React.Component {
       this.handleDropFromOutside(point, bounds)
     })
 
-    selector.on('dragOver', (point) => {
-      if (!this.context.draggable.dragFromOutsideItem) return
+    selector.on('dragOverFromOutside', (point) => {
+      const item = this.context.draggable.dragFromOutsideItem
+        ? this.context.draggable.dragFromOutsideItem()
+        : null
+      if (!item) return
       const bounds = getBoundsForNode(node)
-      this.handleDropFromOutside(point, bounds)
+      if (!pointInColumn(bounds, point)) return this.reset()
+      this.handleDragOverFromOutside(point, bounds)
     })
 
     selector.on('selectStart', () => {
@@ -228,6 +263,7 @@ class EventContainerWrapper extends React.Component {
       if (isBeingDragged) this.reset()
       this.context.draggable.onEnd(null)
     })
+
     selector.on('reset', () => {
       this.reset()
       this.context.draggable.onEnd(null)

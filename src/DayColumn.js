@@ -110,7 +110,11 @@ class DayColumn extends React.Component {
       accessors,
       localizer,
       getters: { dayProp, ...getters },
-      components: { eventContainerWrapper: EventContainer, ...components },
+      components: {
+        eventContainerWrapper: EventContainer,
+        timeIndicatorWrapper: TimeIndicatorWrapper,
+        ...components
+      },
     } = this.props
 
     this.slotMetrics = this.slotMetrics.update(this.props)
@@ -120,7 +124,14 @@ class DayColumn extends React.Component {
 
     let selectDates = { start: startDate, end: endDate }
 
-    const { className, style } = dayProp(max)
+    const { className, style } = dayProp(max, resource)
+
+    const timeIndicatorProps = {
+      className: 'rbc-current-time-indicator',
+      style: {
+        top: `${this.state.timeIndicatorPosition}%`,
+      },
+    }
 
     const DayColumnWrapperComponent =
       components.dayColumnWrapper || DayColumnWrapper
@@ -173,10 +184,9 @@ class DayColumn extends React.Component {
           </div>
         )}
         {isNow && this.intervalTriggered && (
-          <div
-            className="rbc-current-time-indicator"
-            style={{ top: `${this.state.timeIndicatorPosition}%` }}
-          />
+          <TimeIndicatorWrapper {...timeIndicatorProps}>
+            <div {...timeIndicatorProps} />
+          </TimeIndicatorWrapper>
         )}
       </DayColumnWrapperComponent>
     )
@@ -210,6 +220,7 @@ class DayColumn extends React.Component {
     return styledEvents.map(({ event, style }, idx) => {
       let end = accessors.end(event)
       let start = accessors.start(event)
+      let key = accessors.eventId(event) ?? 'evt_' + idx
       let format = 'eventTimeRangeFormat'
       let label
 
@@ -230,7 +241,7 @@ class DayColumn extends React.Component {
           style={style}
           event={event}
           label={label}
-          key={'evt_' + idx}
+          key={key}
           getters={getters}
           rtl={rtl}
           components={components}
