@@ -1,3 +1,32 @@
+# [1.3.0](https://github.com/additio/react-big-calendar/compare/v1.2.0...v1.3.0) (2025-10-15)
+
+
+### Bug Fixes
+
+* add appearance: button for better cross-browser button styling c… ([#2677](https://github.com/additio/react-big-calendar/issues/2677)) ([85be249](https://github.com/additio/react-big-calendar/commit/85be24990fc17992c0f7fadb0dc1b1e427d305ac)), closes [#2676](https://github.com/additio/react-big-calendar/issues/2676)
+* Clean up preview elements after dropping from outside ([#2746](https://github.com/additio/react-big-calendar/issues/2746)) ([652502f](https://github.com/additio/react-big-calendar/commit/652502f67c9a193466608319853429b4f85720eb))
+* correctly show +more buttons on slots with hidden spanning events ([#2744](https://github.com/additio/react-big-calendar/issues/2744)) ([dbd0b0a](https://github.com/additio/react-big-calendar/commit/dbd0b0a767c294457704ea682a7c9621d8d93440))
+* Customize drag from outside event's length ([#2681](https://github.com/additio/react-big-calendar/issues/2681)) ([2ed9465](https://github.com/additio/react-big-calendar/commit/2ed9465b159f08c7fa6c09f699a353137304260b)), closes [#2680](https://github.com/additio/react-big-calendar/issues/2680)
+* **dayjs localizer:** reverts previous changs, as it was casting a date as UTC instead of local time ([#2759](https://github.com/additio/react-big-calendar/issues/2759)) ([7ba9e24](https://github.com/additio/react-big-calendar/commit/7ba9e24e24943b1f20efcb1652097933ac3b1774)), closes [#2758](https://github.com/additio/react-big-calendar/issues/2758)
+* **dnd:** added check for null dragFromOutsideItem, updated example ([#2651](https://github.com/additio/react-big-calendar/issues/2651)) ([17e62a3](https://github.com/additio/react-big-calendar/commit/17e62a3d3bf999197e24bd9fb6e68b4cb0fc4873)), closes [#2616](https://github.com/additio/react-big-calendar/issues/2616) [#2383](https://github.com/additio/react-big-calendar/issues/2383)
+* fix dayjs localizer merge function to not change min and max upon tz change ([#2712](https://github.com/additio/react-big-calendar/issues/2712)) ([7d2aa77](https://github.com/additio/react-big-calendar/commit/7d2aa77663d2d96ec50b9dc640277a59cc05ac0c))
+* issue [#2534](https://github.com/additio/react-big-calendar/issues/2534) ([#2566](https://github.com/additio/react-big-calendar/issues/2566)) ([10cfe84](https://github.com/additio/react-big-calendar/commit/10cfe84ec1257cdd09949f50630c3e84680d1aec))
+* Replaces createFactory with createElement ([#2754](https://github.com/additio/react-big-calendar/issues/2754)) ([23a0fae](https://github.com/additio/react-big-calendar/commit/23a0faeab665c961461ebeda2f555f819afbe4a3)), closes [#2377](https://github.com/additio/react-big-calendar/issues/2377) [#1831](https://github.com/additio/react-big-calendar/issues/1831) [#2740](https://github.com/additio/react-big-calendar/issues/2740)
+* **Toolbar:** cursor styling on hover ([#2700](https://github.com/additio/react-big-calendar/issues/2700)) ([7029eb3](https://github.com/additio/react-big-calendar/commit/7029eb3e7ee09134ca9e490c828dffcf98019a7e)), closes [#2697](https://github.com/additio/react-big-calendar/issues/2697)
+* update doc type of onDropFromOutside function signature ([5438fb5](https://github.com/additio/react-big-calendar/commit/5438fb51e019111742228a6b22825aa694cac256))
+* Update Slack channel invite in README.md ([47dadc3](https://github.com/additio/react-big-calendar/commit/47dadc380598e5ecd5f9ffb89cb7c00b7c65c0f8))
+* Update Slack channel invite link in README-ar.md ([de8dd0f](https://github.com/additio/react-big-calendar/commit/de8dd0fed3a025e57aa2929ced0b8c88fec6da25))
+
+
+### Features
+
+* add support for React 19 ([#2710](https://github.com/additio/react-big-calendar/issues/2710)) ([4d39499](https://github.com/additio/react-big-calendar/commit/4d39499d0dc2803d8cf38a2d4036cbdb3c1a0b93))
+* adds a new event id accessor ([#2693](https://github.com/additio/react-big-calendar/issues/2693)) ([9883ace](https://github.com/additio/react-big-calendar/commit/9883ace5ae79829f41bbc3721a61e9f5fa45f61b))
+* **components:** showMore component customization ([#2537](https://github.com/additio/react-big-calendar/issues/2537)) ([afb3138](https://github.com/additio/react-big-calendar/commit/afb31384d1c68a075112ef2f3fc5499f975f0d03)), closes [#2391](https://github.com/additio/react-big-calendar/issues/2391)
+* **dayPropGetter:** pass resourceId to method ([#2650](https://github.com/additio/react-big-calendar/issues/2650)) ([272eb88](https://github.com/additio/react-big-calendar/commit/272eb88d53343d1283621b5626603e052100d092)), closes [#2634](https://github.com/additio/react-big-calendar/issues/2634)
+* implement Conditional Resource Grouping ([#2679](https://github.com/additio/react-big-calendar/issues/2679)) ([d52f836](https://github.com/additio/react-big-calendar/commit/d52f836b1170106c87d1f9a64bb8c2c3484278f5))
+* **time-indicator-wrapper:** expose time indicator wrapper component ([#2747](https://github.com/additio/react-big-calendar/issues/2747)) ([10b8041](https://github.com/additio/react-big-calendar/commit/10b8041f6c6b41304c74ad70f36fcb7f0e67b698))
+
 ## [1.19.4](https://github.com/jquense/react-big-calendar/compare/v1.19.3...v1.19.4) (2025-06-16)
 
 ### Bug Fixes
