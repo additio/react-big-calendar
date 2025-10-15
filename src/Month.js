@@ -76,9 +76,14 @@ class MonthView extends React.Component {
   }
 
   render() {
-    let { date, localizer, className } = this.props,
+    let { date, localizer, className, workdaysOnly } = this.props,
       month = localizer.visibleDays(date, localizer),
       weeks = chunk(month, 7)
+
+    if (workdaysOnly) {
+      month = month.filter((day) => !localizer.isWeekend(day))
+      weeks = chunk(month, 5)
+    }
 
     this._weekCount = weeks.length
 
@@ -386,6 +391,7 @@ MonthView.propTypes = {
   selected: PropTypes.object,
   selectable: PropTypes.oneOf([true, false, 'ignoreEvents']),
   longPressThreshold: PropTypes.number,
+  workdaysOnly: PropTypes.bool,
 
   onNavigate: PropTypes.func,
   onSelectSlot: PropTypes.func,

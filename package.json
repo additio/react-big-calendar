@@ -1,5 +1,5 @@
 {
-  "name": "react-big-calendar",
+  "name": "@additio/react-big-calendar",
   "version": "1.19.4",
   "description": "Calendar! with events",
   "author": {
@@ -8,11 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jquense/react-big-calendar.git"
+    "url": "https://github.com/additio/react-big-calendar.git"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "@additio:registry": "https://npm.pkg.github.com"
   },
   "license": "MIT",
   "main": "lib/index.js",
@@ -42,7 +41,8 @@
     "prettier": "prettier '**/*js' '!lib/**' --write ",
     "storybook": "start-storybook -p 9002",
     "test": "yarn lint && NODE_ENV=test jest",
-    "tdd": "NODE_ENV=test jest --watch"
+    "tdd": "NODE_ENV=test jest --watch",
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {
     "react": "^16.14.0 || ^17 || ^18 || ^19",

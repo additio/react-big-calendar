@@ -34,7 +34,7 @@ export default function Basic({
       components: {
         timeSlotWrapper: ColoredDateCellWrapper,
       },
-      defaultDate: new Date(2015, 3, 1),
+      defaultDate: new Date(2023, 3, 1),
       max: dates.add(dates.endOf(new Date(2015, 17, 1), 'day'), -1, 'hours'),
       views: Object.keys(Views).map((k) => Views[k]),
     }),
@@ -54,6 +54,7 @@ export default function Basic({
           showMultiDayTimes
           step={60}
           views={views}
+          workdaysOnly
         />
       </div>
     </Fragment>
