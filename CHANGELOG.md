@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/additio/react-big-calendar/compare/v1.3.1...v1.3.2) (2026-05-26)
+
+
+### Bug Fixes
+
+* **Month:** preserve needLimitMeasure state set by resize listener ([#2797](https://github.com/additio/react-big-calendar/issues/2797)) ([e37e7ce](https://github.com/additio/react-big-calendar/commit/e37e7ce7a007743f011700188e42fd15a6a6cce1)), closes [#2789](https://github.com/additio/react-big-calendar/issues/2789)
+
 ## [1.3.1](https://github.com/additio/react-big-calendar/compare/v1.3.0...v1.3.1) (2026-05-15)
 
 
