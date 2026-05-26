@@ -1,0 +1,16 @@
+packages:
+  - '.'
+
+overrides:
+  trim: '>=0.0.3'
+  trim-newlines: '>=3.0.1'
+  braces: '>=3.0.3'
+  micromatch: '>=4.0.8'
+  uuid: '>=11.1.1'
+  serialize-javascript: '>=7.0.3'
+  yaml: '>=2.8.3'
+
+allowBuilds:
+  core-js: false
+  core-js-pure: false
+  esbuild: true
